@@ -7,7 +7,7 @@ NC='\033[0m' # No Color
 
 get_listening_ports() {
   # lsof -i -sTCP:LISTEN | grep -Eo "[a-zA-Z0-9]* \(" | cut -d' ' -f1 | sort -u
-  lsof -i -sTCP:LISTEN
+  lsof -i -P -sTCP:LISTEN
 }
 
 get_top_mem_processes() {
